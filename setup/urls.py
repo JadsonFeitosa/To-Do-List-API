@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from src.task.views import TaskViewSet
+from src.task.views import CategoryViewSet, TaskViewSet
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
@@ -11,6 +11,7 @@ from src.user.views import RegisterView
 router = DefaultRouter()
 
 router.register(r'task', TaskViewSet, basename='task')
+router.register(r'categories', CategoryViewSet, basename='category')
 
 urlpatterns = [
     path('admin/', admin.site.urls),

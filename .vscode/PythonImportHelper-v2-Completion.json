@@ -90,6 +90,14 @@
         "documentation": {}
     },
     {
+        "label": "CategoryViewSet",
+        "importPath": "src.task.views",
+        "description": "src.task.views",
+        "isExtraImport": true,
+        "detail": "src.task.views",
+        "documentation": {}
+    },
+    {
         "label": "TaskViewSet",
         "importPath": "src.task.views",
         "description": "src.task.views",
@@ -219,6 +227,15 @@
         "documentation": {}
     },
     {
+        "label": "django.contrib.auth.models",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
         "label": "User",
         "importPath": "django.contrib.auth.models",
         "description": "django.contrib.auth.models",
@@ -308,6 +325,14 @@
     },
     {
         "label": "TaskModel",
+        "importPath": "src.task.models",
+        "description": "src.task.models",
+        "isExtraImport": true,
+        "detail": "src.task.models",
+        "documentation": {}
+    },
+    {
+        "label": "CategoryModel",
         "importPath": "src.task.models",
         "description": "src.task.models",
         "isExtraImport": true,
@@ -603,7 +628,7 @@
         "kind": 5,
         "importPath": "setup.urls",
         "description": "setup.urls",
-        "peekOfCode": "router = DefaultRouter()\nrouter.register(r'task', TaskViewSet, basename='task')\nurlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include(router.urls)),\n    path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'), \n    path('refresh-token/', TokenRefreshView.as_view(), name='refresh_token'), \n    path('register-user/', RegisterView.as_view(), name='register_user'),\n]",
+        "peekOfCode": "router = DefaultRouter()\nrouter.register(r'task', TaskViewSet, basename='task')\nrouter.register(r'categories', CategoryViewSet, basename='category')\nurlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include(router.urls)),\n    path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'), \n    path('refresh-token/', TokenRefreshView.as_view(), name='refresh_token'), \n    path('register-user/', RegisterView.as_view(), name='register_user'),\n]",
         "detail": "setup.urls",
         "documentation": {}
     },
@@ -693,7 +718,7 @@
         "kind": 6,
         "importPath": "src.task.serializers",
         "description": "src.task.serializers",
-        "peekOfCode": "class CategorySerializer(serializers.ModelSerializer):\n    class Meta:\n        model = CategoryModel\n        fields = ['all']\nclass TaskSerializer(serializers.ModelSerializer):\n    category_detail = CategorySerializer(source='category', read_only=True)\n    owner = serializers.ReadOnlyField(source='user.username') \n    class Meta:\n       model = TaskModel\n       fields = ['id', 'title', 'status', 'priority', 'deadline', 'category', 'category_detail', 'owner', 'shared_with']",
+        "peekOfCode": "class CategorySerializer(serializers.ModelSerializer):\n    class Meta:\n        model = CategoryModel\n        fields = ['id', 'name']\nclass TaskSerializer(serializers.ModelSerializer):\n    category_detail = CategorySerializer(source='category', read_only=True)\n    owner = serializers.ReadOnlyField(source='user.username') \n    class Meta:\n       model = TaskModel\n       fields = ['id', 'title', 'status', 'priority', 'deadline', 'category', 'category_detail', 'owner', 'shared_with']",
         "detail": "src.task.serializers",
         "documentation": {}
     },
@@ -711,7 +736,7 @@
         "kind": 6,
         "importPath": "src.task.views",
         "description": "src.task.views",
-        "peekOfCode": "class StandardResultsSetPagination(PageNumberPagination):\n    page_size = 10\n    page_size_query_param = 'page_size'\n    max_page_size = 100\nclass TaskViewSet(viewsets.ModelViewSet):\n    queryset = TaskModel.objects.all().order_by('-created_at')\n    serializer_class = TaskSerializer\n    # permission_classes = [permissions.IsAuthenticated]\n    pagination_class = StandardResultsSetPagination\n    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]",
+        "peekOfCode": "class StandardResultsSetPagination(PageNumberPagination):\n    page_size = 10\n    page_size_query_param = 'page_size'\n    max_page_size = 100\nclass TaskViewSet(viewsets.ModelViewSet):\n    queryset = TaskModel.objects.all().order_by('-created_at')\n    serializer_class = TaskSerializer\n    permission_classes = [permissions.IsAuthenticated]\n    pagination_class = StandardResultsSetPagination\n    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]",
         "detail": "src.task.views",
         "documentation": {}
     },
@@ -720,7 +745,16 @@
         "kind": 6,
         "importPath": "src.task.views",
         "description": "src.task.views",
-        "peekOfCode": "class TaskViewSet(viewsets.ModelViewSet):\n    queryset = TaskModel.objects.all().order_by('-created_at')\n    serializer_class = TaskSerializer\n    # permission_classes = [permissions.IsAuthenticated]\n    pagination_class = StandardResultsSetPagination\n    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]\n    filterset_fields = ['is_completed', 'category','status']\n    search_fields = ['title', 'description']\n    ordering_fields = ['created_at', 'due_date']\n    http_method_names = ['get', 'post']",
+        "peekOfCode": "class TaskViewSet(viewsets.ModelViewSet):\n    queryset = TaskModel.objects.all().order_by('-created_at')\n    serializer_class = TaskSerializer\n    permission_classes = [permissions.IsAuthenticated]\n    pagination_class = StandardResultsSetPagination\n    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]\n    filterset_fields = ['is_completed', 'category','status']\n    search_fields = ['title', 'description']\n    ordering_fields = ['created_at', 'due_date']\n    http_method_names = ['get', 'post', 'put', 'patch']",
+        "detail": "src.task.views",
+        "documentation": {}
+    },
+    {
+        "label": "CategoryViewSet",
+        "kind": 6,
+        "importPath": "src.task.views",
+        "description": "src.task.views",
+        "peekOfCode": "class CategoryViewSet(viewsets.ModelViewSet):\n    queryset = CategoryModel.objects.all().order_by('name')\n    serializer_class = CategorySerializer\n    permission_classes = [permissions.IsAuthenticated]\n    pagination_class = StandardResultsSetPagination\n    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]\n    search_fields = ['name']\n    http_method_names = ['get', 'post', 'put', 'patch']\n    def get_queryset(self):\n        user = self.request.user",
         "detail": "src.task.views",
         "documentation": {}
     },
