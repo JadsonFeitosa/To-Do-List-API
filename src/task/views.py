@@ -21,26 +21,15 @@ class TaskViewSet(viewsets.ModelViewSet):
     
     
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
-    filterset_fields = ['is_completed', 'category']
+    filterset_fields = ['is_completed', 'category','status']
     search_fields = ['title', 'description']
     ordering_fields = ['created_at', 'due_date']
     http_method_names = ['get', 'post']
 
-    
-    @action(detail=False, methods=['get'], url_path='concluidas')
-    def listar_concluidas(self, request: Request, *args: any, **kwargs: any) -> Response:
-        tarefas_concluidas = self.get_queryset().filter(concluida=True)
-        
-        serializer = self.get_serializer(tarefas_concluidas, many=True)
-        
-        resposta = {
-            "mensagem": "Lista de tarefas concluídas",
-            "total_concluidas": tarefas_concluidas.count(),
-            "dados": serializer.data
-        }
-        return Response(data=resposta, status=status.HTTP_200_OK)
-
-
+    def get_queryset(self):
+        # Garante que o usuário só veja suas tarefas ou as compartilhadas com ele
+        user = self.request.user
+        return TaskModel.objects.filter(Q(user=user) | Q(shared_with=user)).distinct()
 
     def list(self, request: Request, *args: any, **kwargs: any) -> Response:
         queryset = self.get_queryset()
@@ -55,6 +44,16 @@ class TaskViewSet(viewsets.ModelViewSet):
         
         return Response(data=resposta_customizada, status=status.HTTP_200_OK)
 
+
+    @action(detail=False, methods=['get'])
+    def statistics(self, request):
+        queryset = self.get_queryset()
+        data = {
+            "pending": queryset.filter(status='PENDING').count(),
+            "in_progress": queryset.filter(status='IN_PROGRESS').count(),
+            "completed": queryset.filter(status='COMPLETED').count(),
+        }
+        return Response(data)
 
 
     def perform_create(self, serializer):

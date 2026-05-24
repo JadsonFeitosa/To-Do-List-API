@@ -1,109 +1,5 @@
 [
     {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
-        "label": "AppConfig",
-        "importPath": "django.apps",
-        "description": "django.apps",
-        "isExtraImport": true,
-        "detail": "django.apps",
-        "documentation": {}
-    },
-    {
-        "label": "AppConfig",
-        "importPath": "django.apps",
-        "description": "django.apps",
-        "isExtraImport": true,
-        "detail": "django.apps",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "TestCase",
-        "importPath": "django.test",
-        "description": "django.test",
-        "isExtraImport": true,
-        "detail": "django.test",
-        "documentation": {}
-    },
-    {
-        "label": "TestCase",
-        "importPath": "django.test",
-        "description": "django.test",
-        "isExtraImport": true,
-        "detail": "django.test",
-        "documentation": {}
-    },
-    {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -121,11 +17,43 @@
         "documentation": {}
     },
     {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
         "label": "Path",
         "importPath": "pathlib",
         "description": "pathlib",
         "isExtraImport": true,
         "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
         "documentation": {}
     },
     {
@@ -170,6 +98,30 @@
         "documentation": {}
     },
     {
+        "label": "TokenObtainPairView",
+        "importPath": "rest_framework_simplejwt.views",
+        "description": "rest_framework_simplejwt.views",
+        "isExtraImport": true,
+        "detail": "rest_framework_simplejwt.views",
+        "documentation": {}
+    },
+    {
+        "label": "TokenRefreshView",
+        "importPath": "rest_framework_simplejwt.views",
+        "description": "rest_framework_simplejwt.views",
+        "isExtraImport": true,
+        "detail": "rest_framework_simplejwt.views",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterView",
+        "importPath": "src.user.views",
+        "description": "src.user.views",
+        "isExtraImport": true,
+        "detail": "src.user.views",
+        "documentation": {}
+    },
+    {
         "label": "get_wsgi_application",
         "importPath": "django.core.wsgi",
         "description": "django.core.wsgi",
@@ -195,6 +147,78 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
         "label": "User",
         "importPath": "django.contrib.auth.models",
         "description": "django.contrib.auth.models",
@@ -203,7 +227,15 @@
         "documentation": {}
     },
     {
-        "label": "PrioridadeOptions",
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "PriorityOptions",
         "importPath": "src.task.choices",
         "description": "src.task.choices",
         "isExtraImport": true,
@@ -251,6 +283,22 @@
         "documentation": {}
     },
     {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
         "label": "CategoryModel",
         "importPath": "src.task.models",
         "description": "src.task.models",
@@ -272,6 +320,22 @@
         "description": "src.task.models",
         "isExtraImport": true,
         "detail": "src.task.models",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
         "documentation": {}
     },
     {
@@ -307,11 +371,51 @@
         "documentation": {}
     },
     {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
         "label": "action",
         "importPath": "rest_framework.decorators",
         "description": "rest_framework.decorators",
         "isExtraImport": true,
         "detail": "rest_framework.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "UniqueValidator",
+        "importPath": "rest_framework.validators",
+        "description": "rest_framework.validators",
+        "isExtraImport": true,
+        "detail": "rest_framework.validators",
+        "documentation": {}
+    },
+    {
+        "label": "APIView",
+        "importPath": "rest_framework.views",
+        "description": "rest_framework.views",
+        "isExtraImport": true,
+        "detail": "rest_framework.views",
+        "documentation": {}
+    },
+    {
+        "label": "AllowAny",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterUserSerializer",
+        "importPath": "src.user.serializer",
+        "description": "src.user.serializer",
+        "isExtraImport": true,
+        "detail": "src.user.serializer",
         "documentation": {}
     },
     {
@@ -321,15 +425,6 @@
         "importPath": "sys",
         "description": "sys",
         "detail": "sys",
-        "documentation": {}
-    },
-    {
-        "label": "CoreConfig",
-        "kind": 6,
-        "importPath": "core.apps",
-        "description": "core.apps",
-        "peekOfCode": "class CoreConfig(AppConfig):\n    name = 'core'",
-        "detail": "core.apps",
         "documentation": {}
     },
     {
@@ -346,7 +441,7 @@
         "kind": 5,
         "importPath": "setup.settings",
         "description": "setup.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure--2t-+s1b4+qu!5#je@%v&v_tp(7pr#5mb^r4s989hoj(0*nuhg'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nSECRET_KEY = 'django-insecure--2t-+s1b4+qu!5#je@%v&v_tp(7pr#5mb^r4s989hoj(0*nuhg'\nDEBUG = True\nALLOWED_HOSTS = []\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',",
         "detail": "setup.settings",
         "documentation": {}
     },
@@ -355,7 +450,7 @@
         "kind": 5,
         "importPath": "setup.settings",
         "description": "setup.settings",
-        "peekOfCode": "SECRET_KEY = 'django-insecure--2t-+s1b4+qu!5#je@%v&v_tp(7pr#5mb^r4s989hoj(0*nuhg'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "peekOfCode": "SECRET_KEY = 'django-insecure--2t-+s1b4+qu!5#je@%v&v_tp(7pr#5mb^r4s989hoj(0*nuhg'\nDEBUG = True\nALLOWED_HOSTS = []\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
         "detail": "setup.settings",
         "documentation": {}
     },
@@ -364,7 +459,7 @@
         "kind": 5,
         "importPath": "setup.settings",
         "description": "setup.settings",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'rest_framework',",
         "detail": "setup.settings",
         "documentation": {}
     },
@@ -373,7 +468,7 @@
         "kind": 5,
         "importPath": "setup.settings",
         "description": "setup.settings",
-        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'rest_framework',",
+        "peekOfCode": "ALLOWED_HOSTS = []\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'rest_framework',\n    'django_filters',",
         "detail": "setup.settings",
         "documentation": {}
     },
@@ -382,7 +477,7 @@
         "kind": 5,
         "importPath": "setup.settings",
         "description": "setup.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'rest_framework',\n    'core',\n    'django_filters',",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'rest_framework',\n    'django_filters',\n    # my_apps",
         "detail": "setup.settings",
         "documentation": {}
     },
@@ -418,7 +513,7 @@
         "kind": 5,
         "importPath": "setup.settings",
         "description": "setup.settings",
-        "peekOfCode": "WSGI_APPLICATION = 'setup.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/6.0/ref/settings/#databases\nDATABASES = {\n    'default': {\n            'ENGINE': 'django.db.backends.mysql',\n            'NAME': 'Teste',\n            'USER': 'root',\n            'PASSWORD': 'root',\n            'HOST': 'localhost',",
+        "peekOfCode": "WSGI_APPLICATION = 'setup.wsgi.application'\nDATABASES = {\n    'default': {\n            'ENGINE': 'django.db.backends.mysql',\n            'NAME': 'Teste',\n            'USER': 'root',\n            'PASSWORD': 'root',\n            'HOST': 'localhost',\n            'PORT': '3306',       # Porta padrão do MySQL\n        }",
         "detail": "setup.settings",
         "documentation": {}
     },
@@ -445,7 +540,7 @@
         "kind": 5,
         "importPath": "setup.settings",
         "description": "setup.settings",
-        "peekOfCode": "LANGUAGE_CODE = 'pt-br'\nTIME_ZONE = 'America/Sao_Paulo'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/6.0/howto/static-files/\nSTATIC_URL = 'static/'",
+        "peekOfCode": "LANGUAGE_CODE = 'pt-br'\nTIME_ZONE = 'America/Sao_Paulo'\nUSE_I18N = True\nUSE_TZ = True\nSTATIC_URL = 'static/'\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    'DEFAULT_PERMISSION_CLASSES': (",
         "detail": "setup.settings",
         "documentation": {}
     },
@@ -454,7 +549,7 @@
         "kind": 5,
         "importPath": "setup.settings",
         "description": "setup.settings",
-        "peekOfCode": "TIME_ZONE = 'America/Sao_Paulo'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/6.0/howto/static-files/\nSTATIC_URL = 'static/'",
+        "peekOfCode": "TIME_ZONE = 'America/Sao_Paulo'\nUSE_I18N = True\nUSE_TZ = True\nSTATIC_URL = 'static/'\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    'DEFAULT_PERMISSION_CLASSES': (\n        'rest_framework.permissions.IsAuthenticated',  # Protege todos os endpoints por padrão",
         "detail": "setup.settings",
         "documentation": {}
     },
@@ -463,7 +558,7 @@
         "kind": 5,
         "importPath": "setup.settings",
         "description": "setup.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/6.0/howto/static-files/\nSTATIC_URL = 'static/'",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\nSTATIC_URL = 'static/'\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    'DEFAULT_PERMISSION_CLASSES': (\n        'rest_framework.permissions.IsAuthenticated',  # Protege todos os endpoints por padrão\n    ),",
         "detail": "setup.settings",
         "documentation": {}
     },
@@ -472,7 +567,7 @@
         "kind": 5,
         "importPath": "setup.settings",
         "description": "setup.settings",
-        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/6.0/howto/static-files/\nSTATIC_URL = 'static/'",
+        "peekOfCode": "USE_TZ = True\nSTATIC_URL = 'static/'\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    'DEFAULT_PERMISSION_CLASSES': (\n        'rest_framework.permissions.IsAuthenticated',  # Protege todos os endpoints por padrão\n    ),\n}",
         "detail": "setup.settings",
         "documentation": {}
     },
@@ -481,7 +576,25 @@
         "kind": 5,
         "importPath": "setup.settings",
         "description": "setup.settings",
-        "peekOfCode": "STATIC_URL = 'static/'",
+        "peekOfCode": "STATIC_URL = 'static/'\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    'DEFAULT_PERMISSION_CLASSES': (\n        'rest_framework.permissions.IsAuthenticated',  # Protege todos os endpoints por padrão\n    ),\n}\nSIMPLE_JWT = {",
+        "detail": "setup.settings",
+        "documentation": {}
+    },
+    {
+        "label": "REST_FRAMEWORK",
+        "kind": 5,
+        "importPath": "setup.settings",
+        "description": "setup.settings",
+        "peekOfCode": "REST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    'DEFAULT_PERMISSION_CLASSES': (\n        'rest_framework.permissions.IsAuthenticated',  # Protege todos os endpoints por padrão\n    ),\n}\nSIMPLE_JWT = {\n    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=120),     ",
+        "detail": "setup.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SIMPLE_JWT",
+        "kind": 5,
+        "importPath": "setup.settings",
+        "description": "setup.settings",
+        "peekOfCode": "SIMPLE_JWT = {\n    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=120),     \n    'REFRESH_TOKEN_LIFETIME': timedelta(days=2),        \n    'ROTATE_REFRESH_TOKENS': True,\n    'BLACKLIST_AFTER_ROTATION': True,\n    'AUTH_HEADER_TYPES': ('Bearer',),                   \n}",
         "detail": "setup.settings",
         "documentation": {}
     },
@@ -490,7 +603,7 @@
         "kind": 5,
         "importPath": "setup.urls",
         "description": "setup.urls",
-        "peekOfCode": "router = DefaultRouter()\n# 2. Registra a ViewSet (O primeiro argumento define o prefixo da URL)\nrouter.register(r'task', TaskViewSet, basename='task')\nurlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include(router.urls)),\n]",
+        "peekOfCode": "router = DefaultRouter()\nrouter.register(r'task', TaskViewSet, basename='task')\nurlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include(router.urls)),\n    path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'), \n    path('refresh-token/', TokenRefreshView.as_view(), name='refresh_token'), \n    path('register-user/', RegisterView.as_view(), name='register_user'),\n]",
         "detail": "setup.urls",
         "documentation": {}
     },
@@ -499,7 +612,7 @@
         "kind": 5,
         "importPath": "setup.urls",
         "description": "setup.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include(router.urls)),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include(router.urls)),\n    path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'), \n    path('refresh-token/', TokenRefreshView.as_view(), name='refresh_token'), \n    path('register-user/', RegisterView.as_view(), name='register_user'),\n]",
         "detail": "setup.urls",
         "documentation": {}
     },
@@ -519,6 +632,15 @@
         "description": "src.task.migrations.0001_initial",
         "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='CategoryModel',\n            fields=[\n                ('id', models.BigAutoField(editable=False, primary_key=True, serialize=False)),",
         "detail": "src.task.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "src.task.migrations.0002_alter_taskmodel_status",
+        "description": "src.task.migrations.0002_alter_taskmodel_status",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('task', '0001_initial'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='taskmodel',\n            name='status',\n            field=models.CharField(choices=[('ALTA', 'Prioridade Alta'), ('MEDIA', 'Prioridade Média'), ('BAIXA', 'Prioridade Baixa')], default='MEDIA', max_length=50),\n        ),",
+        "detail": "src.task.migrations.0002_alter_taskmodel_status",
         "documentation": {}
     },
     {
@@ -567,20 +689,20 @@
         "documentation": {}
     },
     {
-        "label": "TaskSerializer",
-        "kind": 6,
-        "importPath": "src.task.serializers",
-        "description": "src.task.serializers",
-        "peekOfCode": "class TaskSerializer(serializers.ModelSerializer): \n    class Meta:\n       model = TaskModel\n       fields = ['all']\nclass CategorySerializer(serializers.ModelSerializer):\n    class Meta:\n        model = CategoryModel\n        fields = ['all']",
-        "detail": "src.task.serializers",
-        "documentation": {}
-    },
-    {
         "label": "CategorySerializer",
         "kind": 6,
         "importPath": "src.task.serializers",
         "description": "src.task.serializers",
-        "peekOfCode": "class CategorySerializer(serializers.ModelSerializer):\n    class Meta:\n        model = CategoryModel\n        fields = ['all']",
+        "peekOfCode": "class CategorySerializer(serializers.ModelSerializer):\n    class Meta:\n        model = CategoryModel\n        fields = ['all']\nclass TaskSerializer(serializers.ModelSerializer):\n    category_detail = CategorySerializer(source='category', read_only=True)\n    owner = serializers.ReadOnlyField(source='user.username') \n    class Meta:\n       model = TaskModel\n       fields = ['id', 'title', 'status', 'priority', 'deadline', 'category', 'category_detail', 'owner', 'shared_with']",
+        "detail": "src.task.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "TaskSerializer",
+        "kind": 6,
+        "importPath": "src.task.serializers",
+        "description": "src.task.serializers",
+        "peekOfCode": "class TaskSerializer(serializers.ModelSerializer):\n    category_detail = CategorySerializer(source='category', read_only=True)\n    owner = serializers.ReadOnlyField(source='user.username') \n    class Meta:\n       model = TaskModel\n       fields = ['id', 'title', 'status', 'priority', 'deadline', 'category', 'category_detail', 'owner', 'shared_with']",
         "detail": "src.task.serializers",
         "documentation": {}
     },
@@ -598,8 +720,35 @@
         "kind": 6,
         "importPath": "src.task.views",
         "description": "src.task.views",
-        "peekOfCode": "class TaskViewSet(viewsets.ModelViewSet):\n    queryset = TaskModel.objects.all().order_by('-created_at')\n    serializer_class = TaskSerializer\n    # permission_classes = [permissions.IsAuthenticated]\n    pagination_class = StandardResultsSetPagination\n    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]\n    filterset_fields = ['is_completed', 'category']\n    search_fields = ['title', 'description']\n    ordering_fields = ['created_at', 'due_date']\n    http_method_names = ['get', 'post']",
+        "peekOfCode": "class TaskViewSet(viewsets.ModelViewSet):\n    queryset = TaskModel.objects.all().order_by('-created_at')\n    serializer_class = TaskSerializer\n    # permission_classes = [permissions.IsAuthenticated]\n    pagination_class = StandardResultsSetPagination\n    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]\n    filterset_fields = ['is_completed', 'category','status']\n    search_fields = ['title', 'description']\n    ordering_fields = ['created_at', 'due_date']\n    http_method_names = ['get', 'post']",
         "detail": "src.task.views",
+        "documentation": {}
+    },
+    {
+        "label": "UserConfig",
+        "kind": 6,
+        "importPath": "src.user.apps",
+        "description": "src.user.apps",
+        "peekOfCode": "class UserConfig(AppConfig):\n    name = 'src.user'",
+        "detail": "src.user.apps",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterUserSerializer",
+        "kind": 6,
+        "importPath": "src.user.serializer",
+        "description": "src.user.serializer",
+        "peekOfCode": "class RegisterUserSerializer(serializers.ModelSerializer):\n    email = serializers.EmailField(\n        required=True,\n        validators=[UniqueValidator(queryset=User.objects.all(), message=\"Este e-mail já está cadastrado.\")]\n    )\n    password = serializers.CharField(\n        write_only=True, \n        required=True, \n        style={'input_type': 'password'}\n    )",
+        "detail": "src.user.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterView",
+        "kind": 6,
+        "importPath": "src.user.views",
+        "description": "src.user.views",
+        "peekOfCode": "class RegisterView(APIView):\n    permission_classes = [AllowAny]\n    def post(self, request):\n        serializer = RegisterUserSerializer(data=request.data)\n        if serializer.is_valid():\n            serializer.save()\n            return Response(\n                {\"message\": \"Usuário criado com sucesso!\"}, \n                status=status.HTTP_201_CREATED\n            )",
+        "detail": "src.user.views",
         "documentation": {}
     },
     {
