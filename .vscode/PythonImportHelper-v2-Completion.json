@@ -488,7 +488,7 @@
         "kind": 5,
         "importPath": "setup.settings",
         "description": "setup.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nSECRET_KEY = 'django-insecure--2t-+s1b4+qu!5#je@%v&v_tp(7pr#5mb^r4s989hoj(0*nuhg'\nDEBUG = True\nALLOWED_HOSTS = []\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nSECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure--2t-+s1b4+qu!5#je@%v&v_tp(7pr#5mb^r4s989hoj(0*nuhg')\nDEBUG = os.environ.get('DJANGO_DEBUG', 'True').lower() in ('1', 'true', 'yes')\nALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost').split(',')\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',",
         "detail": "setup.settings",
         "documentation": {}
     },
@@ -497,7 +497,7 @@
         "kind": 5,
         "importPath": "setup.settings",
         "description": "setup.settings",
-        "peekOfCode": "SECRET_KEY = 'django-insecure--2t-+s1b4+qu!5#je@%v&v_tp(7pr#5mb^r4s989hoj(0*nuhg'\nDEBUG = True\nALLOWED_HOSTS = []\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "peekOfCode": "SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure--2t-+s1b4+qu!5#je@%v&v_tp(7pr#5mb^r4s989hoj(0*nuhg')\nDEBUG = os.environ.get('DJANGO_DEBUG', 'True').lower() in ('1', 'true', 'yes')\nALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost').split(',')\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
         "detail": "setup.settings",
         "documentation": {}
     },
@@ -506,7 +506,7 @@
         "kind": 5,
         "importPath": "setup.settings",
         "description": "setup.settings",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'rest_framework',",
+        "peekOfCode": "DEBUG = os.environ.get('DJANGO_DEBUG', 'True').lower() in ('1', 'true', 'yes')\nALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost').split(',')\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'rest_framework',",
         "detail": "setup.settings",
         "documentation": {}
     },
@@ -515,7 +515,7 @@
         "kind": 5,
         "importPath": "setup.settings",
         "description": "setup.settings",
-        "peekOfCode": "ALLOWED_HOSTS = []\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'rest_framework',\n    'django_filters',",
+        "peekOfCode": "ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost').split(',')\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'rest_framework',\n    'django_filters',",
         "detail": "setup.settings",
         "documentation": {}
     },
@@ -560,7 +560,7 @@
         "kind": 5,
         "importPath": "setup.settings",
         "description": "setup.settings",
-        "peekOfCode": "WSGI_APPLICATION = 'setup.wsgi.application'\nDATABASES = {\n    'default': {\n            'ENGINE': 'django.db.backends.mysql',\n            'NAME': 'Teste',\n            'USER': 'root',\n            'PASSWORD': 'root',\n            'HOST': 'localhost',\n            'PORT': '3306',       \n        }",
+        "peekOfCode": "WSGI_APPLICATION = 'setup.wsgi.application'\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.mysql',\n        'NAME': os.environ.get('MYSQL_DATABASE', 'Teste'),\n        'USER': os.environ.get('MYSQL_USER', 'root'),\n        'PASSWORD': os.environ.get('MYSQL_PASSWORD', 'root'),\n        'HOST': os.environ.get('MYSQL_HOST', 'localhost'),\n        'PORT': os.environ.get('MYSQL_PORT', '3306'),\n    }",
         "detail": "setup.settings",
         "documentation": {}
     },
@@ -569,7 +569,7 @@
         "kind": 5,
         "importPath": "setup.settings",
         "description": "setup.settings",
-        "peekOfCode": "DATABASES = {\n    'default': {\n            'ENGINE': 'django.db.backends.mysql',\n            'NAME': 'Teste',\n            'USER': 'root',\n            'PASSWORD': 'root',\n            'HOST': 'localhost',\n            'PORT': '3306',       \n        }\n}",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.mysql',\n        'NAME': os.environ.get('MYSQL_DATABASE', 'Teste'),\n        'USER': os.environ.get('MYSQL_USER', 'root'),\n        'PASSWORD': os.environ.get('MYSQL_PASSWORD', 'root'),\n        'HOST': os.environ.get('MYSQL_HOST', 'localhost'),\n        'PORT': os.environ.get('MYSQL_PORT', '3306'),\n    }\n}",
         "detail": "setup.settings",
         "documentation": {}
     },

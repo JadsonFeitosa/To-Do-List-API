@@ -1,0 +1,41 @@
+version: '3.9'
+
+services:
+
+# Comentar o db para rodar localmente, e descomentar a linha do MYSQL_HOST no api
+  db:
+    image: mysql:8.1
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: teste
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+    ports:
+      - '3306:3306'
+    volumes:
+      - db_data:/var/lib/mysql
+
+  api:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app:cached
+    ports:
+      - '8000:8000'
+    environment:
+      DJANGO_DEBUG: 'True'
+      DJANGO_SECRET_KEY: 'django-insecure--2t-+s1b4+qu!5#je@%v&v_tp(7pr#5mb^r4s989hoj(0*nuhg'
+      DJANGO_ALLOWED_HOSTS: '0.0.0.0,127.0.0.1'
+      MYSQL_DATABASE: teste
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+      MYSQL_HOST: db 
+      # MYSQL_HOST: host.docker.internal
+      MYSQL_PORT: '3306'
+
+#   comentar para rodar localmente 
+    depends_on:
+      - db
+
+volumes:
+  db_data:
