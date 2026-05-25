@@ -57,15 +57,6 @@
         "documentation": {}
     },
     {
-        "label": "django.urls",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
         "label": "path",
         "importPath": "django.urls",
         "description": "django.urls",
@@ -187,6 +178,22 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -227,11 +234,10 @@
         "documentation": {}
     },
     {
-        "label": "django.contrib.auth.models",
-        "kind": 6,
-        "isExtraImport": true,
+        "label": "User",
         "importPath": "django.contrib.auth.models",
         "description": "django.contrib.auth.models",
+        "isExtraImport": true,
         "detail": "django.contrib.auth.models",
         "documentation": {}
     },
@@ -253,6 +259,22 @@
     },
     {
         "label": "PriorityOptions",
+        "importPath": "src.task.choices",
+        "description": "src.task.choices",
+        "isExtraImport": true,
+        "detail": "src.task.choices",
+        "documentation": {}
+    },
+    {
+        "label": "StatusTask",
+        "importPath": "src.task.choices",
+        "description": "src.task.choices",
+        "isExtraImport": true,
+        "detail": "src.task.choices",
+        "documentation": {}
+    },
+    {
+        "label": "StatusTask",
         "importPath": "src.task.choices",
         "description": "src.task.choices",
         "isExtraImport": true,
@@ -380,14 +402,6 @@
         "documentation": {}
     },
     {
-        "label": "Request",
-        "importPath": "rest_framework.request",
-        "description": "rest_framework.request",
-        "isExtraImport": true,
-        "detail": "rest_framework.request",
-        "documentation": {}
-    },
-    {
         "label": "Response",
         "importPath": "rest_framework.response",
         "description": "rest_framework.response",
@@ -409,6 +423,14 @@
         "description": "rest_framework.decorators",
         "isExtraImport": true,
         "detail": "rest_framework.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "Q",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
         "documentation": {}
     },
     {
@@ -538,7 +560,7 @@
         "kind": 5,
         "importPath": "setup.settings",
         "description": "setup.settings",
-        "peekOfCode": "WSGI_APPLICATION = 'setup.wsgi.application'\nDATABASES = {\n    'default': {\n            'ENGINE': 'django.db.backends.mysql',\n            'NAME': 'Teste',\n            'USER': 'root',\n            'PASSWORD': 'root',\n            'HOST': 'localhost',\n            'PORT': '3306',       # Porta padrão do MySQL\n        }",
+        "peekOfCode": "WSGI_APPLICATION = 'setup.wsgi.application'\nDATABASES = {\n    'default': {\n            'ENGINE': 'django.db.backends.mysql',\n            'NAME': 'Teste',\n            'USER': 'root',\n            'PASSWORD': 'root',\n            'HOST': 'localhost',\n            'PORT': '3306',       \n        }",
         "detail": "setup.settings",
         "documentation": {}
     },
@@ -547,7 +569,7 @@
         "kind": 5,
         "importPath": "setup.settings",
         "description": "setup.settings",
-        "peekOfCode": "DATABASES = {\n    'default': {\n            'ENGINE': 'django.db.backends.mysql',\n            'NAME': 'Teste',\n            'USER': 'root',\n            'PASSWORD': 'root',\n            'HOST': 'localhost',\n            'PORT': '3306',       # Porta padrão do MySQL\n        }\n}",
+        "peekOfCode": "DATABASES = {\n    'default': {\n            'ENGINE': 'django.db.backends.mysql',\n            'NAME': 'Teste',\n            'USER': 'root',\n            'PASSWORD': 'root',\n            'HOST': 'localhost',\n            'PORT': '3306',       \n        }\n}",
         "detail": "setup.settings",
         "documentation": {}
     },
@@ -574,7 +596,7 @@
         "kind": 5,
         "importPath": "setup.settings",
         "description": "setup.settings",
-        "peekOfCode": "TIME_ZONE = 'America/Sao_Paulo'\nUSE_I18N = True\nUSE_TZ = True\nSTATIC_URL = 'static/'\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    'DEFAULT_PERMISSION_CLASSES': (\n        'rest_framework.permissions.IsAuthenticated',  # Protege todos os endpoints por padrão",
+        "peekOfCode": "TIME_ZONE = 'America/Sao_Paulo'\nUSE_I18N = True\nUSE_TZ = True\nSTATIC_URL = 'static/'\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    'DEFAULT_PERMISSION_CLASSES': (\n        'rest_framework.permissions.IsAuthenticated',  ",
         "detail": "setup.settings",
         "documentation": {}
     },
@@ -583,7 +605,7 @@
         "kind": 5,
         "importPath": "setup.settings",
         "description": "setup.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\nSTATIC_URL = 'static/'\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    'DEFAULT_PERMISSION_CLASSES': (\n        'rest_framework.permissions.IsAuthenticated',  # Protege todos os endpoints por padrão\n    ),",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\nSTATIC_URL = 'static/'\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    'DEFAULT_PERMISSION_CLASSES': (\n        'rest_framework.permissions.IsAuthenticated',  \n    ),",
         "detail": "setup.settings",
         "documentation": {}
     },
@@ -592,7 +614,7 @@
         "kind": 5,
         "importPath": "setup.settings",
         "description": "setup.settings",
-        "peekOfCode": "USE_TZ = True\nSTATIC_URL = 'static/'\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    'DEFAULT_PERMISSION_CLASSES': (\n        'rest_framework.permissions.IsAuthenticated',  # Protege todos os endpoints por padrão\n    ),\n}",
+        "peekOfCode": "USE_TZ = True\nSTATIC_URL = 'static/'\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    'DEFAULT_PERMISSION_CLASSES': (\n        'rest_framework.permissions.IsAuthenticated',  \n    ),\n}",
         "detail": "setup.settings",
         "documentation": {}
     },
@@ -601,7 +623,7 @@
         "kind": 5,
         "importPath": "setup.settings",
         "description": "setup.settings",
-        "peekOfCode": "STATIC_URL = 'static/'\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    'DEFAULT_PERMISSION_CLASSES': (\n        'rest_framework.permissions.IsAuthenticated',  # Protege todos os endpoints por padrão\n    ),\n}\nSIMPLE_JWT = {",
+        "peekOfCode": "STATIC_URL = 'static/'\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    'DEFAULT_PERMISSION_CLASSES': (\n        'rest_framework.permissions.IsAuthenticated',  \n    ),\n}\nSIMPLE_JWT = {",
         "detail": "setup.settings",
         "documentation": {}
     },
@@ -610,7 +632,7 @@
         "kind": 5,
         "importPath": "setup.settings",
         "description": "setup.settings",
-        "peekOfCode": "REST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    'DEFAULT_PERMISSION_CLASSES': (\n        'rest_framework.permissions.IsAuthenticated',  # Protege todos os endpoints por padrão\n    ),\n}\nSIMPLE_JWT = {\n    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=120),     ",
+        "peekOfCode": "REST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    'DEFAULT_PERMISSION_CLASSES': (\n        'rest_framework.permissions.IsAuthenticated',  \n    ),\n}\nSIMPLE_JWT = {\n    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=120),     ",
         "detail": "setup.settings",
         "documentation": {}
     },
@@ -619,7 +641,7 @@
         "kind": 5,
         "importPath": "setup.settings",
         "description": "setup.settings",
-        "peekOfCode": "SIMPLE_JWT = {\n    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=120),     \n    'REFRESH_TOKEN_LIFETIME': timedelta(days=2),        \n    'ROTATE_REFRESH_TOKENS': True,\n    'BLACKLIST_AFTER_ROTATION': True,\n    'AUTH_HEADER_TYPES': ('Bearer',),                   \n}",
+        "peekOfCode": "SIMPLE_JWT = {\n    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=120),     \n    'REFRESH_TOKEN_LIFETIME': timedelta(days=10),        \n    'ROTATE_REFRESH_TOKENS': True,\n    'BLACKLIST_AFTER_ROTATION': True,\n    'AUTH_HEADER_TYPES': ('Bearer',),                   \n}",
         "detail": "setup.settings",
         "documentation": {}
     },
@@ -628,7 +650,7 @@
         "kind": 5,
         "importPath": "setup.urls",
         "description": "setup.urls",
-        "peekOfCode": "router = DefaultRouter()\nrouter.register(r'task', TaskViewSet, basename='task')\nrouter.register(r'categories', CategoryViewSet, basename='category')\nurlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include(router.urls)),\n    path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'), \n    path('refresh-token/', TokenRefreshView.as_view(), name='refresh_token'), \n    path('register-user/', RegisterView.as_view(), name='register_user'),\n]",
+        "peekOfCode": "router = DefaultRouter()\nrouter.register(r'tasks', TaskViewSet, basename='task')\nrouter.register(r'categories', CategoryViewSet, basename='category')\nurlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include(router.urls)),\n    path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'), \n    path('refresh-token/', TokenRefreshView.as_view(), name='refresh_token'), \n    path('register-user/', RegisterView.as_view(), name='register_user'),\n]",
         "detail": "setup.urls",
         "documentation": {}
     },
@@ -666,6 +688,15 @@
         "description": "src.task.migrations.0002_alter_taskmodel_status",
         "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('task', '0001_initial'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='taskmodel',\n            name='status',\n            field=models.CharField(choices=[('ALTA', 'Prioridade Alta'), ('MEDIA', 'Prioridade Média'), ('BAIXA', 'Prioridade Baixa')], default='MEDIA', max_length=50),\n        ),",
         "detail": "src.task.migrations.0002_alter_taskmodel_status",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "src.task.migrations.0003_taskmodel_priority_alter_taskmodel_status",
+        "description": "src.task.migrations.0003_taskmodel_priority_alter_taskmodel_status",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('task', '0002_alter_taskmodel_status'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='taskmodel',\n            name='priority',\n            field=models.CharField(choices=[('ALTA', 'Prioridade Alta'), ('MEDIA', 'Prioridade Média'), ('BAIXA', 'Prioridade Baixa')], default='MEDIA', max_length=50),\n        ),",
+        "detail": "src.task.migrations.0003_taskmodel_priority_alter_taskmodel_status",
         "documentation": {}
     },
     {
@@ -718,7 +749,7 @@
         "kind": 6,
         "importPath": "src.task.serializers",
         "description": "src.task.serializers",
-        "peekOfCode": "class CategorySerializer(serializers.ModelSerializer):\n    class Meta:\n        model = CategoryModel\n        fields = ['id', 'name']\nclass TaskSerializer(serializers.ModelSerializer):\n    category_detail = CategorySerializer(source='category', read_only=True)\n    owner = serializers.ReadOnlyField(source='user.username') \n    class Meta:\n       model = TaskModel\n       fields = ['id', 'title', 'status', 'priority', 'deadline', 'category', 'category_detail', 'owner', 'shared_with']",
+        "peekOfCode": "class CategorySerializer(serializers.ModelSerializer):\n    class Meta:\n        model = CategoryModel\n        fields = ['id', 'name']\nclass TaskSerializer(serializers.ModelSerializer):\n    category_detail = CategorySerializer(source='category', read_only=True)\n    owner = serializers.ReadOnlyField(source='user.username') \n    class Meta:\n       model = TaskModel\n       fields = ['id', 'title', 'status', 'priority', 'category', 'category_detail', 'owner', 'shared_with', 'due_date', 'created_at']",
         "detail": "src.task.serializers",
         "documentation": {}
     },
@@ -727,7 +758,7 @@
         "kind": 6,
         "importPath": "src.task.serializers",
         "description": "src.task.serializers",
-        "peekOfCode": "class TaskSerializer(serializers.ModelSerializer):\n    category_detail = CategorySerializer(source='category', read_only=True)\n    owner = serializers.ReadOnlyField(source='user.username') \n    class Meta:\n       model = TaskModel\n       fields = ['id', 'title', 'status', 'priority', 'deadline', 'category', 'category_detail', 'owner', 'shared_with']",
+        "peekOfCode": "class TaskSerializer(serializers.ModelSerializer):\n    category_detail = CategorySerializer(source='category', read_only=True)\n    owner = serializers.ReadOnlyField(source='user.username') \n    class Meta:\n       model = TaskModel\n       fields = ['id', 'title', 'status', 'priority', 'category', 'category_detail', 'owner', 'shared_with', 'due_date', 'created_at']",
         "detail": "src.task.serializers",
         "documentation": {}
     },
@@ -745,7 +776,7 @@
         "kind": 6,
         "importPath": "src.task.views",
         "description": "src.task.views",
-        "peekOfCode": "class TaskViewSet(viewsets.ModelViewSet):\n    queryset = TaskModel.objects.all().order_by('-created_at')\n    serializer_class = TaskSerializer\n    permission_classes = [permissions.IsAuthenticated]\n    pagination_class = StandardResultsSetPagination\n    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]\n    filterset_fields = ['is_completed', 'category','status']\n    search_fields = ['title', 'description']\n    ordering_fields = ['created_at', 'due_date']\n    http_method_names = ['get', 'post', 'put', 'patch']",
+        "peekOfCode": "class TaskViewSet(viewsets.ModelViewSet):\n    queryset = TaskModel.objects.all().order_by('-created_at')\n    serializer_class = TaskSerializer\n    permission_classes = [permissions.IsAuthenticated]\n    pagination_class = StandardResultsSetPagination\n    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]\n    filterset_fields = ['is_completed', 'category','status']\n    search_fields = ['title', 'description']\n    ordering_fields = ['created_at', 'due_date']\n    http_method_names = ['get', 'post', 'put', 'patch', 'delete']",
         "detail": "src.task.views",
         "documentation": {}
     },
@@ -754,7 +785,7 @@
         "kind": 6,
         "importPath": "src.task.views",
         "description": "src.task.views",
-        "peekOfCode": "class CategoryViewSet(viewsets.ModelViewSet):\n    queryset = CategoryModel.objects.all().order_by('name')\n    serializer_class = CategorySerializer\n    permission_classes = [permissions.IsAuthenticated]\n    pagination_class = StandardResultsSetPagination\n    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]\n    search_fields = ['name']\n    http_method_names = ['get', 'post', 'put', 'patch']\n    def get_queryset(self):\n        user = self.request.user",
+        "peekOfCode": "class CategoryViewSet(viewsets.ModelViewSet):\n    queryset = CategoryModel.objects.all().order_by('name')\n    serializer_class = CategorySerializer\n    permission_classes = [permissions.IsAuthenticated]\n    pagination_class = StandardResultsSetPagination\n    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]\n    search_fields = ['name']\n    http_method_names = ['get', 'post', 'put', 'patch','delete']\n    def get_queryset(self):\n        user = self.request.user",
         "detail": "src.task.views",
         "documentation": {}
     },

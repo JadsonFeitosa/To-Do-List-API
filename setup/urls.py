@@ -10,7 +10,7 @@ from src.user.views import RegisterView
 
 router = DefaultRouter()
 
-router.register(r'task', TaskViewSet, basename='task')
+router.register(r'tasks', TaskViewSet, basename='task')
 router.register(r'categories', CategoryViewSet, basename='category')
 
 urlpatterns = [

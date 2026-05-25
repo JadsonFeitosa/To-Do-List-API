@@ -1,13 +1,13 @@
-import django.contrib.auth.models
-import django.urls
+from django.contrib.auth.models import User
 from rest_framework import viewsets, permissions, filters, status
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.pagination import PageNumberPagination
 from src.task.models import CategoryModel, TaskModel
+from src.task.choices import StatusTask
 from .serializers import TaskSerializer, CategorySerializer
-from rest_framework.request import Request
 from rest_framework.response import Response
 from rest_framework.decorators import action
+from django.db.models import Q
 
 class StandardResultsSetPagination(PageNumberPagination):
     page_size = 10
@@ -25,33 +25,20 @@ class TaskViewSet(viewsets.ModelViewSet):
     filterset_fields = ['is_completed', 'category','status']
     search_fields = ['title', 'description']
     ordering_fields = ['created_at', 'due_date']
-    http_method_names = ['get', 'post', 'put', 'patch']
+    http_method_names = ['get', 'post', 'put', 'patch', 'delete']
 
     def get_queryset(self):
         user = self.request.user
         return TaskModel.objects.filter(Q(user=user) | Q(shared_with=user)).distinct()
-
-    def list(self, request: Request, *args: any, **kwargs: any) -> Response:
-        queryset = self.get_queryset()
-        
-        serializer = self.get_serializer(queryset, many=True)
-        
-        resposta_customizada = {
-            "total": len(serializer.data),
-            "status": "sucesso",
-            "dados": serializer.data
-        }
-        
-        return Response(data=resposta_customizada, status=status.HTTP_200_OK)
 
 
     @action(detail=False, methods=['get'])
     def statistics(self, request):
         queryset = self.get_queryset()
         data = {
-            "pending": queryset.filter(status='PENDING').count(),
-            "in_progress": queryset.filter(status='IN_PROGRESS').count(),
-            "completed": queryset.filter(status='COMPLETED').count(),
+            "pending": queryset.filter(status= StatusTask.PENDING).count(),
+            "in_progress": queryset.filter(status=StatusTask.IN_PROGRESS).count(),
+            "completed": queryset.filter(status=StatusTask.COMPLETED).count(),
         }
         return Response(data)
 
@@ -64,7 +51,7 @@ class TaskViewSet(viewsets.ModelViewSet):
 
         shared_user = request.data.get('id_user', None)
         
-        if task.owner != request.user:
+        if task.user != request.user:
             return Response(
                 {"error": "Você só pode compartilhar tarefas das quais é o dono."},
                 status=status.HTTP_400_BAD_REQUEST
@@ -92,7 +79,6 @@ class TaskViewSet(viewsets.ModelViewSet):
                 status=status.HTTP_400_BAD_REQUEST
             )
 
-        # Adiciona o usuário à relação ManyToMany
         task.shared_with.add(user_to_share)
         return Response(
             {"message": f"Tarefa compartilhada com sucesso com '{user_to_share.username}'."},
@@ -117,7 +103,7 @@ class CategoryViewSet(viewsets.ModelViewSet):
     
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
     search_fields = ['name']
-    http_method_names = ['get', 'post', 'put', 'patch']
+    http_method_names = ['get', 'post', 'put', 'patch','delete']
 
     def get_queryset(self):
         user = self.request.user
