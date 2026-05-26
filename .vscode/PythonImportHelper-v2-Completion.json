@@ -81,6 +81,22 @@
         "documentation": {}
     },
     {
+        "label": "SpectacularAPIView",
+        "importPath": "drf_spectacular.views",
+        "description": "drf_spectacular.views",
+        "isExtraImport": true,
+        "detail": "drf_spectacular.views",
+        "documentation": {}
+    },
+    {
+        "label": "SpectacularSwaggerView",
+        "importPath": "drf_spectacular.views",
+        "description": "drf_spectacular.views",
+        "isExtraImport": true,
+        "detail": "drf_spectacular.views",
+        "documentation": {}
+    },
+    {
         "label": "CategoryViewSet",
         "importPath": "src.task.views",
         "description": "src.task.views",
@@ -596,7 +612,7 @@
         "kind": 5,
         "importPath": "setup.settings",
         "description": "setup.settings",
-        "peekOfCode": "TIME_ZONE = 'America/Sao_Paulo'\nUSE_I18N = True\nUSE_TZ = True\nSTATIC_URL = 'static/'\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    'DEFAULT_PERMISSION_CLASSES': (\n        'rest_framework.permissions.IsAuthenticated',  ",
+        "peekOfCode": "TIME_ZONE = 'America/Sao_Paulo'\nUSE_I18N = True\nUSE_TZ = True\nSTATIC_URL = 'static/'\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    'DEFAULT_PERMISSION_CLASSES': (\n        'rest_framework.permissions.IsAuthenticated',",
         "detail": "setup.settings",
         "documentation": {}
     },
@@ -605,7 +621,7 @@
         "kind": 5,
         "importPath": "setup.settings",
         "description": "setup.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\nSTATIC_URL = 'static/'\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    'DEFAULT_PERMISSION_CLASSES': (\n        'rest_framework.permissions.IsAuthenticated',  \n    ),",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\nSTATIC_URL = 'static/'\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    'DEFAULT_PERMISSION_CLASSES': (\n        'rest_framework.permissions.IsAuthenticated',\n    ),",
         "detail": "setup.settings",
         "documentation": {}
     },
@@ -614,7 +630,7 @@
         "kind": 5,
         "importPath": "setup.settings",
         "description": "setup.settings",
-        "peekOfCode": "USE_TZ = True\nSTATIC_URL = 'static/'\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    'DEFAULT_PERMISSION_CLASSES': (\n        'rest_framework.permissions.IsAuthenticated',  \n    ),\n}",
+        "peekOfCode": "USE_TZ = True\nSTATIC_URL = 'static/'\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    'DEFAULT_PERMISSION_CLASSES': (\n        'rest_framework.permissions.IsAuthenticated',\n    ),\n    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',",
         "detail": "setup.settings",
         "documentation": {}
     },
@@ -623,7 +639,7 @@
         "kind": 5,
         "importPath": "setup.settings",
         "description": "setup.settings",
-        "peekOfCode": "STATIC_URL = 'static/'\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    'DEFAULT_PERMISSION_CLASSES': (\n        'rest_framework.permissions.IsAuthenticated',  \n    ),\n}\nSIMPLE_JWT = {",
+        "peekOfCode": "STATIC_URL = 'static/'\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    'DEFAULT_PERMISSION_CLASSES': (\n        'rest_framework.permissions.IsAuthenticated',\n    ),\n    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',\n}",
         "detail": "setup.settings",
         "documentation": {}
     },
@@ -632,7 +648,16 @@
         "kind": 5,
         "importPath": "setup.settings",
         "description": "setup.settings",
-        "peekOfCode": "REST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    'DEFAULT_PERMISSION_CLASSES': (\n        'rest_framework.permissions.IsAuthenticated',  \n    ),\n}\nSIMPLE_JWT = {\n    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=120),     ",
+        "peekOfCode": "REST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    'DEFAULT_PERMISSION_CLASSES': (\n        'rest_framework.permissions.IsAuthenticated',\n    ),\n    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',\n}\nSPECTACULAR_SETTINGS = {",
+        "detail": "setup.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SPECTACULAR_SETTINGS",
+        "kind": 5,
+        "importPath": "setup.settings",
+        "description": "setup.settings",
+        "peekOfCode": "SPECTACULAR_SETTINGS = {\n    'TITLE': 'To-Do List API',\n    'DESCRIPTION': 'API de tarefas com Django REST Framework',\n    'VERSION': '0.1.0',\n    'SERVE_INCLUDE_SCHEMA': False,\n    'COMPONENT_SPLIT_PATCH': True,\n    'SECURITY': [{\n        'BearerAuth': [],\n    }],\n    'SECURITY_SCHEMES': {",
         "detail": "setup.settings",
         "documentation": {}
     },
@@ -650,7 +675,7 @@
         "kind": 5,
         "importPath": "setup.urls",
         "description": "setup.urls",
-        "peekOfCode": "router = DefaultRouter()\nrouter.register(r'tasks', TaskViewSet, basename='task')\nrouter.register(r'categories', CategoryViewSet, basename='category')\nurlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include(router.urls)),\n    path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'), \n    path('refresh-token/', TokenRefreshView.as_view(), name='refresh_token'), \n    path('register-user/', RegisterView.as_view(), name='register_user'),\n]",
+        "peekOfCode": "router = DefaultRouter()\nrouter.register(r'tasks', TaskViewSet, basename='task')\nrouter.register(r'categories', CategoryViewSet, basename='category')\nurlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include(router.urls)),\n    path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),\n    path('refresh-token/', TokenRefreshView.as_view(), name='refresh_token'),\n    path('register-user/', RegisterView.as_view(), name='register_user'),\n    path('api/schema/', SpectacularAPIView.as_view(), name='schema'),",
         "detail": "setup.urls",
         "documentation": {}
     },
@@ -659,7 +684,7 @@
         "kind": 5,
         "importPath": "setup.urls",
         "description": "setup.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include(router.urls)),\n    path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'), \n    path('refresh-token/', TokenRefreshView.as_view(), name='refresh_token'), \n    path('register-user/', RegisterView.as_view(), name='register_user'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include(router.urls)),\n    path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),\n    path('refresh-token/', TokenRefreshView.as_view(), name='refresh_token'),\n    path('register-user/', RegisterView.as_view(), name='register_user'),\n    path('api/schema/', SpectacularAPIView.as_view(), name='schema'),\n    path('api/schema/swagger-ui/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),\n]",
         "detail": "setup.urls",
         "documentation": {}
     },

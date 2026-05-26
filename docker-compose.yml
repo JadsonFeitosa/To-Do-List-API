@@ -1,22 +1,26 @@
-version: '3.9'
-
 services:
 
-# Comentar o db para rodar localmente, e descomentar a linha do MYSQL_HOST no api
+  # Comentar o db para rodar localmente, e descomentar a linha do MYSQL_HOST no api
   db:
     image: mysql:8.1
     restart: unless-stopped
     environment:
       MYSQL_DATABASE: teste
-      MYSQL_USER: root
-      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'no'
     ports:
       - '3306:3306'
     volumes:
       - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-proot"]
+      timeout: 5s
+      retries: 5
+      start_period: 10s
 
   api:
     build: .
+    restart: on-failure 
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/app:cached
@@ -29,13 +33,14 @@ services:
       MYSQL_DATABASE: teste
       MYSQL_USER: root
       MYSQL_PASSWORD: root
-      MYSQL_HOST: db 
+      MYSQL_HOST: db
       # MYSQL_HOST: host.docker.internal
       MYSQL_PORT: '3306'
 
-#   comentar para rodar localmente 
+
     depends_on:
-      - db
+      db:
+        condition: service_healthy 
 
 volumes:
   db_data:

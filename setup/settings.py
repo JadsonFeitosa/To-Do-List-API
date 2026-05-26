@@ -22,6 +22,7 @@ INSTALLED_APPS = [
     'django_filters',
 
     # my_apps
+    'drf_spectacular',
     'src.task',
     'src.user'
 
@@ -97,8 +98,28 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
     'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticated',  
+        'rest_framework.permissions.IsAuthenticated',
     ),
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'To-Do List API',
+    'DESCRIPTION': 'API de tarefas com Django REST Framework',
+    'VERSION': '0.1.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+
+    'COMPONENT_SPLIT_PATCH': True,
+    'SECURITY': [{
+        'BearerAuth': [],
+    }],
+    'SECURITY_SCHEMES': {
+        'BearerAuth': {
+            'type': 'http',
+            'scheme': 'bearer',
+            'bearerFormat': 'JWT',
+        },
+    },
 }
 
 
