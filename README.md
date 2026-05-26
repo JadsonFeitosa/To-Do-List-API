@@ -4,19 +4,33 @@
 ### 🚀 Como Rodar o Projeto com Docker
 
   Certifique-se de ter o **Docker** e o **Docker Compose** instalados em sua máquina.
+  
     # 1. Clonar o Repositório
+    
     # 2. Construir e Subir os Contêineres
+    
         Terminal: docker compose up --build
+        
     # 3. Executar as Migrações do Banco de Dados
+    
         Terminal: docker compose exec api python manage.py migrate
+        
         A API estará disponível em: http://127.0.0.1:8000/
+        
     # 4. Criar um Usuário para Testes
+    
         Terminal: docker compose exec api python manage.py createsuperuser
+        
           Sentirá o terminal pedir:
+          
             Username: (ex: admin)
+            
             E-mail: (pode deixar em branco e dar Enter)
+            
             Password: (sua senha - ela não aparece enquanto você digita por segurança)
+            
             Password (again): (confirme a senha)
+            
     
 
 ### 🔑 Como Testar os Endpoints pelo Swagger
