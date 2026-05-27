@@ -29,13 +29,18 @@ jobs:
     - name: Configurar o Python
       uses: actions/setup-python@v5
       with:
-        python-version: '3.11' # Altere para a versão do seu projeto se necessário
-        cache: 'pip' # Ativa o cache para instalar dependências mais rápido nas próximas vezes
+        python-version: '3.11' 
+        cache: 'pip' # Ativa o cache para instalações mais rápidas nos próximos deploys
 
     - name: Instalar Dependências
       run: |
         python -m pip install --upgrade pip
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        if [ -f requirements.txt ]; then
+          pip install -r requirements.txt
+        else
+          echo "ERRO: O arquivo requirements.txt não foi encontrado na raiz do projeto!"
+          exit 1
+        fi
 
     - name: Validar configurações do Django (Check)
       env:
