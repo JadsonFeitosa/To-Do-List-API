@@ -73,6 +73,22 @@
         "documentation": {}
     },
     {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
         "label": "DefaultRouter",
         "importPath": "rest_framework.routers",
         "description": "rest_framework.routers",
@@ -338,6 +354,22 @@
         "documentation": {}
     },
     {
+        "label": "status",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
         "label": "serializers",
         "importPath": "rest_framework",
         "description": "rest_framework",
@@ -387,6 +419,14 @@
     },
     {
         "label": "CategoryModel",
+        "importPath": "src.task.models",
+        "description": "src.task.models",
+        "isExtraImport": true,
+        "detail": "src.task.models",
+        "documentation": {}
+    },
+    {
+        "label": "TaskModel",
         "importPath": "src.task.models",
         "description": "src.task.models",
         "isExtraImport": true,
@@ -466,6 +506,31 @@
         "documentation": {}
     },
     {
+        "label": "pytest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytest",
+        "description": "pytest",
+        "detail": "pytest",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_model",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "APIClient",
+        "importPath": "rest_framework.test",
+        "description": "rest_framework.test",
+        "isExtraImport": true,
+        "detail": "rest_framework.test",
+        "documentation": {}
+    },
+    {
         "label": "UniqueValidator",
         "importPath": "rest_framework.validators",
         "description": "rest_framework.validators",
@@ -495,31 +560,6 @@
         "description": "src.user.serializer",
         "isExtraImport": true,
         "detail": "src.user.serializer",
-        "documentation": {}
-    },
-    {
-        "label": "pytest",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "pytest",
-        "description": "pytest",
-        "detail": "pytest",
-        "documentation": {}
-    },
-    {
-        "label": "get_user_model",
-        "importPath": "django.contrib.auth",
-        "description": "django.contrib.auth",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth",
-        "documentation": {}
-    },
-    {
-        "label": "APIClient",
-        "importPath": "rest_framework.test",
-        "description": "rest_framework.test",
-        "isExtraImport": true,
-        "detail": "rest_framework.test",
         "documentation": {}
     },
     {
@@ -865,6 +905,114 @@
         "documentation": {}
     },
     {
+        "label": "api_client",
+        "kind": 2,
+        "importPath": "src.tests.conftest",
+        "description": "src.tests.conftest",
+        "peekOfCode": "def api_client():\n    return APIClient()\n@pytest.fixture\ndef user_dono(db):\n    return User.objects.create_user(username=\"jadson\", password=\"123\")\n@pytest.fixture\ndef user_outro(db):\n    return User.objects.create_user(username=\"outro_usuario\", password=\"123\")\n@pytest.fixture\ndef auth_client_dono(api_client, user_dono):",
+        "detail": "src.tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "user_dono",
+        "kind": 2,
+        "importPath": "src.tests.conftest",
+        "description": "src.tests.conftest",
+        "peekOfCode": "def user_dono(db):\n    return User.objects.create_user(username=\"jadson\", password=\"123\")\n@pytest.fixture\ndef user_outro(db):\n    return User.objects.create_user(username=\"outro_usuario\", password=\"123\")\n@pytest.fixture\ndef auth_client_dono(api_client, user_dono):\n    api_client.force_authenticate(user=user_dono)\n    return api_client\n@pytest.fixture",
+        "detail": "src.tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "user_outro",
+        "kind": 2,
+        "importPath": "src.tests.conftest",
+        "description": "src.tests.conftest",
+        "peekOfCode": "def user_outro(db):\n    return User.objects.create_user(username=\"outro_usuario\", password=\"123\")\n@pytest.fixture\ndef auth_client_dono(api_client, user_dono):\n    api_client.force_authenticate(user=user_dono)\n    return api_client\n@pytest.fixture\ndef categoria_dono(user_dono):\n    return CategoryModel.objects.create(name=\"CASA\", user=user_dono)\n@pytest.fixture",
+        "detail": "src.tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "auth_client_dono",
+        "kind": 2,
+        "importPath": "src.tests.conftest",
+        "description": "src.tests.conftest",
+        "peekOfCode": "def auth_client_dono(api_client, user_dono):\n    api_client.force_authenticate(user=user_dono)\n    return api_client\n@pytest.fixture\ndef categoria_dono(user_dono):\n    return CategoryModel.objects.create(name=\"CASA\", user=user_dono)\n@pytest.fixture\ndef tarefa_dono(user_dono, categoria_dono):\n    return TaskModel.objects.create(\n        title=\"Tarefa\",",
+        "detail": "src.tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "categoria_dono",
+        "kind": 2,
+        "importPath": "src.tests.conftest",
+        "description": "src.tests.conftest",
+        "peekOfCode": "def categoria_dono(user_dono):\n    return CategoryModel.objects.create(name=\"CASA\", user=user_dono)\n@pytest.fixture\ndef tarefa_dono(user_dono, categoria_dono):\n    return TaskModel.objects.create(\n        title=\"Tarefa\",\n        description=\"faça\",\n        status=\"PENDENTE\",\n        priority=\"ALTA\",\n        due_date=\"2026-06-25T00:00:00Z\",  # Formato ISO correto para o Django",
+        "detail": "src.tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "tarefa_dono",
+        "kind": 2,
+        "importPath": "src.tests.conftest",
+        "description": "src.tests.conftest",
+        "peekOfCode": "def tarefa_dono(user_dono, categoria_dono):\n    return TaskModel.objects.create(\n        title=\"Tarefa\",\n        description=\"faça\",\n        status=\"PENDENTE\",\n        priority=\"ALTA\",\n        due_date=\"2026-06-25T00:00:00Z\",  # Formato ISO correto para o Django\n        user=user_dono,\n        category=categoria_dono\n    )",
+        "detail": "src.tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 5,
+        "importPath": "src.tests.conftest",
+        "description": "src.tests.conftest",
+        "peekOfCode": "User = get_user_model()\n@pytest.fixture\ndef api_client():\n    return APIClient()\n@pytest.fixture\ndef user_dono(db):\n    return User.objects.create_user(username=\"jadson\", password=\"123\")\n@pytest.fixture\ndef user_outro(db):\n    return User.objects.create_user(username=\"outro_usuario\", password=\"123\")",
+        "detail": "src.tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "test_registro_de_usuario_com_sucesso",
+        "kind": 2,
+        "importPath": "src.tests.test_auth",
+        "description": "src.tests.test_auth",
+        "peekOfCode": "def test_registro_de_usuario_com_sucesso(api_client):\n    url = reverse('register_user')  \n    payload = {\n        \"username\": \"novo_usuario_teste\",\n        \"email\": \"teste@email.com\",      # 🌟 ADICIONADO: O campo que o seu Django estava exigindo!\n        \"password\": \"SenhaSegura@2026\",  \n        \"name\": \"Novo Usuario\"           \n    }\n    response = api_client.post(url, payload, format='json')\n    if response.status_code != status.HTTP_201_CREATED:",
+        "detail": "src.tests.test_auth",
+        "documentation": {}
+    },
+    {
+        "label": "test_login_gera_tokens_jwt_corretamente",
+        "kind": 2,
+        "importPath": "src.tests.test_auth",
+        "description": "src.tests.test_auth",
+        "peekOfCode": "def test_login_gera_tokens_jwt_corretamente(api_client, user_dono):\n    url = reverse('token_obtain_pair')\n    payload = {\n        \"username\": \"jadson\",\n        \"password\": \"123\"  \n    }\n    response = api_client.post(url, payload, format='json')\n    assert response.status_code == status.HTTP_200_OK\n    assert \"access\" in response.data\n    assert \"refresh\" in response.data",
+        "detail": "src.tests.test_auth",
+        "documentation": {}
+    },
+    {
+        "label": "test_criar_tarefa_vinculada_ao_usuario_logado",
+        "kind": 2,
+        "importPath": "src.tests.test_tasks",
+        "description": "src.tests.test_tasks",
+        "peekOfCode": "def test_criar_tarefa_vinculada_ao_usuario_logado(auth_client_dono, categoria_dono):\n    url = reverse('task-list')\n    payload = {\n        \"title\": \"Configurar o Pytest\",\n        \"status\": \"PENDENTE\",\n        \"priority\": \"ALTA\",\n        \"category\": categoria_dono.id\n    }\n    response = auth_client_dono.post(url, payload, format='json')\n    assert response.status_code == status.HTTP_201_CREATED",
+        "detail": "src.tests.test_tasks",
+        "documentation": {}
+    },
+    {
+        "label": "test_bloquear_usuario_deslogado_de_ver_tarefas",
+        "kind": 2,
+        "importPath": "src.tests.test_tasks",
+        "description": "src.tests.test_tasks",
+        "peekOfCode": "def test_bloquear_usuario_deslogado_de_ver_tarefas(api_client):\n    url = reverse('task-list')\n    response = api_client.get(url)\n    assert response.status_code == status.HTTP_401_UNAUTHORIZED\n@pytest.mark.django_db\ndef test_de_isolamento_de_dados_usuario_nao_ve_tarefa_alheia(api_client, user_dono, user_outro, categoria_dono):\n    tarefa_privada = TaskModel.objects.create(\n        title=\"Plano Secreto\",\n        status=\"PENDENTE\",\n        priority=\"ALTA\",",
+        "detail": "src.tests.test_tasks",
+        "documentation": {}
+    },
+    {
+        "label": "test_de_isolamento_de_dados_usuario_nao_ve_tarefa_alheia",
+        "kind": 2,
+        "importPath": "src.tests.test_tasks",
+        "description": "src.tests.test_tasks",
+        "peekOfCode": "def test_de_isolamento_de_dados_usuario_nao_ve_tarefa_alheia(api_client, user_dono, user_outro, categoria_dono):\n    tarefa_privada = TaskModel.objects.create(\n        title=\"Plano Secreto\",\n        status=\"PENDENTE\",\n        priority=\"ALTA\",\n        user=user_dono,\n        category=categoria_dono\n    )\n    api_client.force_authenticate(user=user_outro)\n    url = reverse('task-detail', kwargs={'pk': tarefa_privada.id})",
+        "detail": "src.tests.test_tasks",
+        "documentation": {}
+    },
+    {
         "label": "UserConfig",
         "kind": 6,
         "importPath": "src.user.apps",
@@ -889,69 +1037,6 @@
         "description": "src.user.views",
         "peekOfCode": "class RegisterView(APIView):\n    permission_classes = [AllowAny]\n    def post(self, request):\n        serializer = RegisterUserSerializer(data=request.data)\n        if serializer.is_valid():\n            serializer.save()\n            return Response(\n                {\"message\": \"Usuário criado com sucesso!\"}, \n                status=status.HTTP_201_CREATED\n            )",
         "detail": "src.user.views",
-        "documentation": {}
-    },
-    {
-        "label": "api_client",
-        "kind": 2,
-        "importPath": "conftest",
-        "description": "conftest",
-        "peekOfCode": "def api_client():\n    return APIClient()\n@pytest.fixture\ndef user(db):\n    return User.objects.create_user(username=\"jadson\", password=\"123\")\n@pytest.fixture\ndef user_outro(db):\n    return User.objects.create_user(username=\"Patricia\", password=\"123\")\n@pytest.fixture\ndef authentication(api_client, user_dono):",
-        "detail": "conftest",
-        "documentation": {}
-    },
-    {
-        "label": "user",
-        "kind": 2,
-        "importPath": "conftest",
-        "description": "conftest",
-        "peekOfCode": "def user(db):\n    return User.objects.create_user(username=\"jadson\", password=\"123\")\n@pytest.fixture\ndef user_outro(db):\n    return User.objects.create_user(username=\"Patricia\", password=\"123\")\n@pytest.fixture\ndef authentication(api_client, user_dono):\n    api_client.force_authenticate(user=user_dono)\n    return api_client\n@pytest.fixture",
-        "detail": "conftest",
-        "documentation": {}
-    },
-    {
-        "label": "user_outro",
-        "kind": 2,
-        "importPath": "conftest",
-        "description": "conftest",
-        "peekOfCode": "def user_outro(db):\n    return User.objects.create_user(username=\"Patricia\", password=\"123\")\n@pytest.fixture\ndef authentication(api_client, user_dono):\n    api_client.force_authenticate(user=user_dono)\n    return api_client\n@pytest.fixture\ndef categoria_dono(user_dono):\n    return CategoryModel.objects.create(name=\"CASA\", user=user_dono)\n@pytest.fixture",
-        "detail": "conftest",
-        "documentation": {}
-    },
-    {
-        "label": "authentication",
-        "kind": 2,
-        "importPath": "conftest",
-        "description": "conftest",
-        "peekOfCode": "def authentication(api_client, user_dono):\n    api_client.force_authenticate(user=user_dono)\n    return api_client\n@pytest.fixture\ndef categoria_dono(user_dono):\n    return CategoryModel.objects.create(name=\"CASA\", user=user_dono)\n@pytest.fixture\ndef tarefa_dono(user_dono, categoria_dono):\n    return TaskModel.objects.create(\n        title=\"Tarefa\",",
-        "detail": "conftest",
-        "documentation": {}
-    },
-    {
-        "label": "categoria_dono",
-        "kind": 2,
-        "importPath": "conftest",
-        "description": "conftest",
-        "peekOfCode": "def categoria_dono(user_dono):\n    return CategoryModel.objects.create(name=\"CASA\", user=user_dono)\n@pytest.fixture\ndef tarefa_dono(user_dono, categoria_dono):\n    return TaskModel.objects.create(\n        title=\"Tarefa\",\n        description=\"faça\",\n        status=\"PENDENTE\",\n        priority=\"ALTA\",\n        due_date=\"2026-06-25T00:00:00Z\",",
-        "detail": "conftest",
-        "documentation": {}
-    },
-    {
-        "label": "tarefa_dono",
-        "kind": 2,
-        "importPath": "conftest",
-        "description": "conftest",
-        "peekOfCode": "def tarefa_dono(user_dono, categoria_dono):\n    return TaskModel.objects.create(\n        title=\"Tarefa\",\n        description=\"faça\",\n        status=\"PENDENTE\",\n        priority=\"ALTA\",\n        due_date=\"2026-06-25T00:00:00Z\",\n        user=user_dono,\n        category=categoria_dono\n    )",
-        "detail": "conftest",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "kind": 5,
-        "importPath": "conftest",
-        "description": "conftest",
-        "peekOfCode": "User = get_user_model()\n@pytest.fixture\ndef api_client():\n    return APIClient()\n@pytest.fixture\ndef user(db):\n    return User.objects.create_user(username=\"jadson\", password=\"123\")\n@pytest.fixture\ndef user_outro(db):\n    return User.objects.create_user(username=\"Patricia\", password=\"123\")",
-        "detail": "conftest",
         "documentation": {}
     },
     {
