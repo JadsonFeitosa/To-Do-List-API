@@ -21,7 +21,7 @@ services:
   api:
     build: .
     restart: on-failure 
-    command: python manage.py runserver 0.0.0.0:8000
+    command: sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
     volumes:
       - .:/app:cached
     ports:
@@ -29,7 +29,7 @@ services:
     environment:
       DJANGO_DEBUG: 'True'
       DJANGO_SECRET_KEY: 'django-insecure--2t-+s1b4+qu!5#je@%v&v_tp(7pr#5mb^r4s989hoj(0*nuhg'
-      DJANGO_ALLOWED_HOSTS: '0.0.0.0,127.0.0.1'
+      DJANGO_ALLOWED_HOSTS: 'localhost,127.0.0.1,0.0.0.0'
       MYSQL_DATABASE: teste
       MYSQL_USER: root
       MYSQL_PASSWORD: root
@@ -39,8 +39,7 @@ services:
 
 
     depends_on:
-      db:
-        condition: service_healthy 
+      - db
 
 volumes:
   db_data:

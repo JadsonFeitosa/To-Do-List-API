@@ -98,7 +98,6 @@ class CategoryViewSet(viewsets.ModelViewSet):
     queryset = CategoryModel.objects.all().order_by('name')
     serializer_class = CategorySerializer
     permission_classes = [permissions.IsAuthenticated]
-    pagination_class = StandardResultsSetPagination
     
     
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]

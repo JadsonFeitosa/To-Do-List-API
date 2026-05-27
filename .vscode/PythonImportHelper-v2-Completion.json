@@ -386,6 +386,22 @@
         "documentation": {}
     },
     {
+        "label": "CategoryModel",
+        "importPath": "src.task.models",
+        "description": "src.task.models",
+        "isExtraImport": true,
+        "detail": "src.task.models",
+        "documentation": {}
+    },
+    {
+        "label": "TaskModel",
+        "importPath": "src.task.models",
+        "description": "src.task.models",
+        "isExtraImport": true,
+        "detail": "src.task.models",
+        "documentation": {}
+    },
+    {
         "label": "TestCase",
         "importPath": "django.test",
         "description": "django.test",
@@ -482,6 +498,31 @@
         "documentation": {}
     },
     {
+        "label": "pytest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytest",
+        "description": "pytest",
+        "detail": "pytest",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_model",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "APIClient",
+        "importPath": "rest_framework.test",
+        "description": "rest_framework.test",
+        "isExtraImport": true,
+        "detail": "rest_framework.test",
+        "documentation": {}
+    },
+    {
         "label": "sys",
         "kind": 6,
         "isExtraImport": true,
@@ -504,7 +545,7 @@
         "kind": 5,
         "importPath": "setup.settings",
         "description": "setup.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nSECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure--2t-+s1b4+qu!5#je@%v&v_tp(7pr#5mb^r4s989hoj(0*nuhg')\nDEBUG = os.environ.get('DJANGO_DEBUG', 'True').lower() in ('1', 'true', 'yes')\nALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost').split(',')\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nSECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure--2t-+s1b4+qu!5#je@%v&v_tp(7pr#5mb^r4s989hoj(0*nuhg')\nDEBUG = os.environ.get('DJANGO_DEBUG', 'True').lower() in ('1', 'true', 'yes')\nALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',",
         "detail": "setup.settings",
         "documentation": {}
     },
@@ -513,7 +554,7 @@
         "kind": 5,
         "importPath": "setup.settings",
         "description": "setup.settings",
-        "peekOfCode": "SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure--2t-+s1b4+qu!5#je@%v&v_tp(7pr#5mb^r4s989hoj(0*nuhg')\nDEBUG = os.environ.get('DJANGO_DEBUG', 'True').lower() in ('1', 'true', 'yes')\nALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost').split(',')\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "peekOfCode": "SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure--2t-+s1b4+qu!5#je@%v&v_tp(7pr#5mb^r4s989hoj(0*nuhg')\nDEBUG = os.environ.get('DJANGO_DEBUG', 'True').lower() in ('1', 'true', 'yes')\nALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
         "detail": "setup.settings",
         "documentation": {}
     },
@@ -522,7 +563,7 @@
         "kind": 5,
         "importPath": "setup.settings",
         "description": "setup.settings",
-        "peekOfCode": "DEBUG = os.environ.get('DJANGO_DEBUG', 'True').lower() in ('1', 'true', 'yes')\nALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost').split(',')\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'rest_framework',",
+        "peekOfCode": "DEBUG = os.environ.get('DJANGO_DEBUG', 'True').lower() in ('1', 'true', 'yes')\nALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'rest_framework',",
         "detail": "setup.settings",
         "documentation": {}
     },
@@ -531,7 +572,7 @@
         "kind": 5,
         "importPath": "setup.settings",
         "description": "setup.settings",
-        "peekOfCode": "ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost').split(',')\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'rest_framework',\n    'django_filters',",
+        "peekOfCode": "ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'rest_framework',\n    'django_filters',",
         "detail": "setup.settings",
         "documentation": {}
     },
@@ -540,7 +581,7 @@
         "kind": 5,
         "importPath": "setup.settings",
         "description": "setup.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'rest_framework',\n    'django_filters',\n    # my_apps",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'rest_framework',\n    'django_filters',\n    'corsheaders',",
         "detail": "setup.settings",
         "documentation": {}
     },
@@ -549,7 +590,7 @@
         "kind": 5,
         "importPath": "setup.settings",
         "description": "setup.settings",
-        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]\nROOT_URLCONF = 'setup.urls'",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'corsheaders.middleware.CorsMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]",
         "detail": "setup.settings",
         "documentation": {}
     },
@@ -666,7 +707,16 @@
         "kind": 5,
         "importPath": "setup.settings",
         "description": "setup.settings",
-        "peekOfCode": "SIMPLE_JWT = {\n    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=120),     \n    'REFRESH_TOKEN_LIFETIME': timedelta(days=10),        \n    'ROTATE_REFRESH_TOKENS': True,\n    'BLACKLIST_AFTER_ROTATION': True,\n    'AUTH_HEADER_TYPES': ('Bearer',),                   \n}",
+        "peekOfCode": "SIMPLE_JWT = {\n    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=120),     \n    'REFRESH_TOKEN_LIFETIME': timedelta(days=10),        \n    'ROTATE_REFRESH_TOKENS': True,\n    'BLACKLIST_AFTER_ROTATION': True,\n    'AUTH_HEADER_TYPES': ('Bearer',),                   \n}\nCORS_ALLOWED_ORIGINS = [\n    'http://localhost:5173',\n]",
+        "detail": "setup.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_ALLOWED_ORIGINS",
+        "kind": 5,
+        "importPath": "setup.settings",
+        "description": "setup.settings",
+        "peekOfCode": "CORS_ALLOWED_ORIGINS = [\n    'http://localhost:5173',\n]",
         "detail": "setup.settings",
         "documentation": {}
     },
@@ -810,7 +860,7 @@
         "kind": 6,
         "importPath": "src.task.views",
         "description": "src.task.views",
-        "peekOfCode": "class CategoryViewSet(viewsets.ModelViewSet):\n    queryset = CategoryModel.objects.all().order_by('name')\n    serializer_class = CategorySerializer\n    permission_classes = [permissions.IsAuthenticated]\n    pagination_class = StandardResultsSetPagination\n    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]\n    search_fields = ['name']\n    http_method_names = ['get', 'post', 'put', 'patch','delete']\n    def get_queryset(self):\n        user = self.request.user",
+        "peekOfCode": "class CategoryViewSet(viewsets.ModelViewSet):\n    queryset = CategoryModel.objects.all().order_by('name')\n    serializer_class = CategorySerializer\n    permission_classes = [permissions.IsAuthenticated]\n    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]\n    search_fields = ['name']\n    http_method_names = ['get', 'post', 'put', 'patch','delete']\n    def get_queryset(self):\n        user = self.request.user\n        return CategoryModel.objects.filter(user=user).distinct()",
         "detail": "src.task.views",
         "documentation": {}
     },
@@ -839,6 +889,69 @@
         "description": "src.user.views",
         "peekOfCode": "class RegisterView(APIView):\n    permission_classes = [AllowAny]\n    def post(self, request):\n        serializer = RegisterUserSerializer(data=request.data)\n        if serializer.is_valid():\n            serializer.save()\n            return Response(\n                {\"message\": \"Usuário criado com sucesso!\"}, \n                status=status.HTTP_201_CREATED\n            )",
         "detail": "src.user.views",
+        "documentation": {}
+    },
+    {
+        "label": "api_client",
+        "kind": 2,
+        "importPath": "conftest",
+        "description": "conftest",
+        "peekOfCode": "def api_client():\n    return APIClient()\n@pytest.fixture\ndef user(db):\n    return User.objects.create_user(username=\"jadson\", password=\"123\")\n@pytest.fixture\ndef user_outro(db):\n    return User.objects.create_user(username=\"Patricia\", password=\"123\")\n@pytest.fixture\ndef authentication(api_client, user_dono):",
+        "detail": "conftest",
+        "documentation": {}
+    },
+    {
+        "label": "user",
+        "kind": 2,
+        "importPath": "conftest",
+        "description": "conftest",
+        "peekOfCode": "def user(db):\n    return User.objects.create_user(username=\"jadson\", password=\"123\")\n@pytest.fixture\ndef user_outro(db):\n    return User.objects.create_user(username=\"Patricia\", password=\"123\")\n@pytest.fixture\ndef authentication(api_client, user_dono):\n    api_client.force_authenticate(user=user_dono)\n    return api_client\n@pytest.fixture",
+        "detail": "conftest",
+        "documentation": {}
+    },
+    {
+        "label": "user_outro",
+        "kind": 2,
+        "importPath": "conftest",
+        "description": "conftest",
+        "peekOfCode": "def user_outro(db):\n    return User.objects.create_user(username=\"Patricia\", password=\"123\")\n@pytest.fixture\ndef authentication(api_client, user_dono):\n    api_client.force_authenticate(user=user_dono)\n    return api_client\n@pytest.fixture\ndef categoria_dono(user_dono):\n    return CategoryModel.objects.create(name=\"CASA\", user=user_dono)\n@pytest.fixture",
+        "detail": "conftest",
+        "documentation": {}
+    },
+    {
+        "label": "authentication",
+        "kind": 2,
+        "importPath": "conftest",
+        "description": "conftest",
+        "peekOfCode": "def authentication(api_client, user_dono):\n    api_client.force_authenticate(user=user_dono)\n    return api_client\n@pytest.fixture\ndef categoria_dono(user_dono):\n    return CategoryModel.objects.create(name=\"CASA\", user=user_dono)\n@pytest.fixture\ndef tarefa_dono(user_dono, categoria_dono):\n    return TaskModel.objects.create(\n        title=\"Tarefa\",",
+        "detail": "conftest",
+        "documentation": {}
+    },
+    {
+        "label": "categoria_dono",
+        "kind": 2,
+        "importPath": "conftest",
+        "description": "conftest",
+        "peekOfCode": "def categoria_dono(user_dono):\n    return CategoryModel.objects.create(name=\"CASA\", user=user_dono)\n@pytest.fixture\ndef tarefa_dono(user_dono, categoria_dono):\n    return TaskModel.objects.create(\n        title=\"Tarefa\",\n        description=\"faça\",\n        status=\"PENDENTE\",\n        priority=\"ALTA\",\n        due_date=\"2026-06-25T00:00:00Z\",",
+        "detail": "conftest",
+        "documentation": {}
+    },
+    {
+        "label": "tarefa_dono",
+        "kind": 2,
+        "importPath": "conftest",
+        "description": "conftest",
+        "peekOfCode": "def tarefa_dono(user_dono, categoria_dono):\n    return TaskModel.objects.create(\n        title=\"Tarefa\",\n        description=\"faça\",\n        status=\"PENDENTE\",\n        priority=\"ALTA\",\n        due_date=\"2026-06-25T00:00:00Z\",\n        user=user_dono,\n        category=categoria_dono\n    )",
+        "detail": "conftest",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 5,
+        "importPath": "conftest",
+        "description": "conftest",
+        "peekOfCode": "User = get_user_model()\n@pytest.fixture\ndef api_client():\n    return APIClient()\n@pytest.fixture\ndef user(db):\n    return User.objects.create_user(username=\"jadson\", password=\"123\")\n@pytest.fixture\ndef user_outro(db):\n    return User.objects.create_user(username=\"Patricia\", password=\"123\")",
+        "detail": "conftest",
         "documentation": {}
     },
     {
