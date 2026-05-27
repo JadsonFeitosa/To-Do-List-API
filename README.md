@@ -11,13 +11,7 @@
     
         Terminal: docker compose up --build
         
-    # 3. Executar as Migrações do Banco de Dados
-    
-        Terminal: docker compose exec api python manage.py migrate
-        
-        A API estará disponível em: http://127.0.0.1:8000/
-        
-    # 4. Criar um Usuário para Testes
+    # 3. Criar um Usuário para Testes
     
         Terminal: docker compose exec api python manage.py createsuperuser
         
